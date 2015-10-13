@@ -4,9 +4,9 @@ Angular full-stack with phonegap support
 This project is extended from https://github.com/DaftMonk/generator-angular-fullstack
 
 The goal of this project is to create a fullstack app with following possibilities
-#1. client and server can be served from same machine (IP)
-#2. client and server can be served from different machines (IPS)
-#3. client can be a phonegap app
+1. client and server can be served from same machine (IP)
+2. client and server can be served from different machines (IPS)
+3. client can be a phonegap app
 
 Here are the steps to test the above possibilities
 
