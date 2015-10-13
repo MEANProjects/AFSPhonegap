@@ -2,14 +2,16 @@
 'use strict';
 
 angular.module('afsphonegapApp')
-  .factory('socket', function(socketFactory) {
+  .factory('socket', function(socketFactory, constants) {
 
     // socket.io now auto-configures its connection when we ommit a connection url
-    var ioSocket = io('', {
+    //var ioSocket = io(constants.BACKEND_URL, {
       // Send auth token on connection, you will need to DI the Auth service above
       // 'query': 'token=' + Auth.getToken()
-      path: '/socket.io-client'
-    });
+      //url: 'http://localhost:9000/socket.io-client'
+    //});
+
+    var ioSocket = io.connect(constants.BACKEND_URL);
 
     var socket = socketFactory({
       ioSocket: ioSocket

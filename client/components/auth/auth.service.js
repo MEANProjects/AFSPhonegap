@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('afsphonegapApp')
-  .factory('Auth', function Auth($location, $rootScope, $http, User, $cookieStore, $q) {
+  .factory('Auth', function Auth($location, $rootScope, $http, User, $cookieStore, $q, constants) {
     var currentUser = {};
     if($cookieStore.get('token')) {
       currentUser = User.get();
@@ -20,7 +20,7 @@ angular.module('afsphonegapApp')
         var cb = callback || angular.noop;
         var deferred = $q.defer();
 
-        $http.post('/auth/local', {
+        $http.post(constants.BACKEND_URL + '/auth/local', {
           email: user.email,
           password: user.password
         }).

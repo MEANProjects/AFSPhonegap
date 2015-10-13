@@ -26,7 +26,8 @@
     "connect-mongo": "^0.8.1",
     "socket.io": "^1.0.6",
     "socket.io-client": "^1.0.6",
-    "socketio-jwt": "^3.0.0"
+    "socketio-jwt": "^3.0.0",
+    "cors": "^2.5.1"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
