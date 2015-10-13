@@ -6,3 +6,5 @@ client/bower_components
 dist
 /server/config/local.env.js
 npm-debug.log
+mobileapp/phonegap/afsphonegap/platforms/android/CordovaLib/bin
+mobileapp/phonegap/afsphonegap/platforms/android/CordovaLib/build
