@@ -22,6 +22,10 @@ Here are the steps to test the above possibilities
 
 - sudo npm install
 
+building
+--------
+grunt build:dist
+
 configure server IP
 --------------------
 - replace the IP in client/components/socket/socket.service.js with the local IP of the development PC
@@ -41,7 +45,11 @@ Testing possibility #2
 Testing possibility #3
 ----------------------
 - grunt build:dist
-- cd mobileapp/phonegap/afsphonegap
+- cd mobileapp/phonegap/afsphonegap/plaforms/android/assets/www
+- edit index.html
+- remove the base tag from html head
+- add <script type="text/javascript" src="cordova.js"></script> as a first script tag at the end of the html
+- go back to mobileapp/phonegap/afsphonegap
 - cordova build android
 - try installing the resulting apk in your device
 - make sure server and the phonegap app connects to the same network (I use Wifi)
