@@ -8,6 +8,8 @@ The goal of this project is to create a fullstack app with following possibiliti
 2. client and server can be served from different machines (IPS)
 3. client can be a phonegap app
 
+Note: good to have python version 2.x.x.
+
 Here are the steps to test the above possibilities
 
 - Clone git clone https://github.com/kannach/AFSPhonegap.git
