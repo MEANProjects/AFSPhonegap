@@ -48,7 +48,7 @@ Testing possibility #3
 - cd mobileapp/phonegap/afsphonegap/plaforms/android/assets/www
 - edit index.html
 - remove the base tag from html head
-- add <script type="text/javascript" src="cordova.js"></script> as a first script tag at the end of the html
+- add "<script type="text/javascript" src="cordova.js"></script>" as a first script tag at the end of the html
 - go back to mobileapp/phonegap/afsphonegap
 - cordova build android
 - try installing the resulting apk in your device
