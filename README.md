@@ -45,6 +45,8 @@ Testing possibility #2
 Testing possibility #3
 ----------------------
 - grunt build:dist
+- cd mobileapp/phonegap/afsphonegap
+- cordova platform add android
 - cd mobileapp/phonegap/afsphonegap/plaforms/android/assets/www
 - edit index.html
 - remove the base tag from html head
