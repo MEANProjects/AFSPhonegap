@@ -19,6 +19,9 @@ Here are the steps to test the above possibilities
 [optional stpes]
    - sudo npm install -g grunt
    - sudo npm uninstall grunt-contrib-imagemin
+   - find . -iname "*afsphonegap" -exec rename s/afsphonegap/projectname/ '{}' \; => renames all files having afsphonegap to your projectname
+   -  grep --exclude-dir=".git" -irl 'afsphonegap' ./ | xargs sed -i 's/afsphonegap/projectname/g' => replaces afsphonegap with your projectname in all files
+
 
 - sudo npm install
 
