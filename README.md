@@ -14,16 +14,20 @@ Here are the steps to test the above possibilities
 
 - Clone git clone https://github.com/kannach/AFSPhonegap.git
 - cd AFSPhonegap
+
+If you want to rename the project name
+----------------------------------------
+   - find . -iname "*afsphonegap" -exec rename s/afsphonegap/projectname/ '{}' \; => renames all files having afsphonegap to your projectname
+   -  grep --exclude-dir=".git" -irl 'afsphonegap' ./ | xargs sed -i 's/afsphonegap/projectname/g' => replaces afsphonegap with your projectname in all files
+
+setup
+-------
 - bower install
+- npm install
 
 [optional stpes]
    - sudo npm install -g grunt
    - sudo npm uninstall grunt-contrib-imagemin
-   - find . -iname "*afsphonegap" -exec rename s/afsphonegap/projectname/ '{}' \; => renames all files having afsphonegap to your projectname
-   -  grep --exclude-dir=".git" -irl 'afsphonegap' ./ | xargs sed -i 's/afsphonegap/projectname/g' => replaces afsphonegap with your projectname in all files
-
-
-- sudo npm install
 
 building
 --------
