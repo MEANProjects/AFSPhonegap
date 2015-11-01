@@ -18,7 +18,7 @@ Here are the steps to test the above possibilities
 If you want to rename the project name
 ----------------------------------------
    - find . -iname "*afsphonegap" -exec rename s/afsphonegap/projectname/ '{}' \; => renames all files having afsphonegap to your projectname
-   -  grep --exclude-dir=".git" -irl 'afsphonegap' ./ | xargs sed -i 's/afsphonegap/projectname/g' => replaces afsphonegap with your projectname in all files
+   -  grep --exclude-dir=".git" -irl 'afsphonegap' ./ | xargs sed -i 's/afsphonegap/projectname/I' => replaces afsphonegap with your projectname in all files
 
 setup
 -------
