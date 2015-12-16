@@ -28,78 +28,99 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <p>AFSPhonegap</p>
+          <h1>
+<a id="afsphonegap" class="anchor" href="#afsphonegap" aria-hidden="true"><span class="octicon octicon-link"></span></a>AFSPhonegap</h1>
 
 <p>Angular full-stack with phonegap support</p>
 
 <p>This project is extended from <a href="https://github.com/DaftMonk/generator-angular-fullstack">https://github.com/DaftMonk/generator-angular-fullstack</a></p>
 
-<p>The goal of this project is to create a fullstack app with following possibilities 1. client and server can be served from same machine (IP) 2. client and server can be served from different machines (IPS) 3. client can be a phonegap app</p>
+<p>The goal of this project is to create a fullstack app with following possibilities
+1. client and server can be served from same machine (IP)
+2. client and server can be served from different machines (IPS)
+3. client can be a phonegap app</p>
 
 <p>Note: good to have python version 2.x.x.</p>
 
 <p>Here are the steps to test the above possibilities</p>
 
-<pre><code>Clone git clone https://github.com/kannach/AFSPhonegap.git
-cd AFSPhonegap
-</code></pre>
+<ul>
+<li>Clone git clone <a href="https://github.com/kannach/AFSPhonegap.git">https://github.com/kannach/AFSPhonegap.git</a>
+</li>
+<li>cd AFSPhonegap</li>
+</ul>
 
-<p>If you want to rename the project name</p>
+<h2>
+<a id="if-you-want-to-rename-the-project-name" class="anchor" href="#if-you-want-to-rename-the-project-name" aria-hidden="true"><span class="octicon octicon-link"></span></a>If you want to rename the project name</h2>
 
-<pre><code>find . -iname "*afsphonegap" -exec rename s/afsphonegap/projectname/ '{}' \; =&gt; renames all files having afsphonegap to your projectname
-grep --exclude-dir=".git" -irl 'afsphonegap' ./ | xargs sed -i 's/afsphonegap/projectname/I' =&gt; replaces afsphonegap with your projectname in all files
-</code></pre>
+<ul>
+<li>find . -iname "*afsphonegap" -exec rename s/afsphonegap/projectname/ '{}' \; =&gt; renames all files having afsphonegap to your projectname</li>
+<li> grep --exclude-dir=".git" -irl 'afsphonegap' ./ | xargs sed -i 's/afsphonegap/projectname/I' =&gt; replaces afsphonegap with your projectname in all files</li>
+</ul>
 
-<p>setup</p>
+<h2>
+<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>setup</h2>
 
-<pre><code>bower install
-npm install
-</code></pre>
+<ul>
+<li>bower install</li>
+<li>npm install</li>
+</ul>
 
 <p>[optional stpes]</p>
 
-<pre><code>sudo npm install -g grunt
-sudo npm uninstall grunt-contrib-imagemin
-</code></pre>
+<ul>
+<li>sudo npm install -g grunt</li>
+<li>sudo npm uninstall grunt-contrib-imagemin</li>
+</ul>
 
-<p>building</p>
+<h2>
+<a id="building" class="anchor" href="#building" aria-hidden="true"><span class="octicon octicon-link"></span></a>building</h2>
 
-<p>grunt build:dist
-configure server IP</p>
+<p>grunt build:dist</p>
 
-<pre><code>replace the IP in client/components/socket/socket.service.js with the local IP of the development PC
-</code></pre>
+<h2>
+<a id="configure-server-ip" class="anchor" href="#configure-server-ip" aria-hidden="true"><span class="octicon octicon-link"></span></a>configure server IP</h2>
 
-<p>Testing possibility #1</p>
+<ul>
+<li>replace the IP in client/components/socket/socket.service.js with the local IP of the development PC</li>
+</ul>
 
-<pre><code>grunt serve
-try loggin in
-add, delete things
-</code></pre>
+<h2>
+<a id="testing-possibility-1" class="anchor" href="#testing-possibility-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing possibility #1</h2>
 
-<p>Testing possibility #2</p>
+<ul>
+<li>grunt serve</li>
+<li>try loggin in</li>
+<li>add, delete things</li>
+</ul>
 
-<pre><code>Deploy the client in the different port. I use aptana studio to create a web project -&gt; import client code -&gt; run index.html as javascript app
-try logging in
-add, delete things
-</code></pre>
+<h2>
+<a id="testing-possibility-2" class="anchor" href="#testing-possibility-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing possibility #2</h2>
 
-<p>Testing possibility #3</p>
+<ul>
+<li>Deploy the client in the different port. I use aptana studio to create a web project -&gt; import client code -&gt; run index.html as javascript app</li>
+<li>try logging in </li>
+<li>add, delete things</li>
+</ul>
 
-<pre><code>grunt build:dist
-cd mobileapp/phonegap/afsphonegap
-cordova platform add android
-cd mobileapp/phonegap/afsphonegap/plaforms/android/assets/www
-edit index.html
-remove the base tag from html head
-add "#script type="text/javascript" src="cordova.js"##/script#" as a first script tag at the end of the html
-go back to mobileapp/phonegap/afsphonegap
-cordova build android
-try installing the resulting apk in your device
-make sure server and the phonegap app connects to the same network (I use Wifi)
-login
-add, delete things
-</code></pre>
+<h2>
+<a id="testing-possibility-3" class="anchor" href="#testing-possibility-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing possibility #3</h2>
+
+<ul>
+<li>grunt build:dist</li>
+<li>cd mobileapp/phonegap/afsphonegap</li>
+<li>cordova platform add android</li>
+<li>cd mobileapp/phonegap/afsphonegap/plaforms/android/assets/www</li>
+<li>edit index.html</li>
+<li>remove the base tag from html head</li>
+<li>add "#script type="text/javascript" src="cordova.js"##/script#" as a first script tag at the end of the html</li>
+<li>go back to mobileapp/phonegap/afsphonegap</li>
+<li>cordova build android</li>
+<li>try installing the resulting apk in your device</li>
+<li>make sure server and the phonegap app connects to the same network (I use Wifi)</li>
+<li>login</li>
+<li>add, delete things</li>
+</ul>
 
 <p>Note: socket connection is yet to be tested</p>
         </section>
