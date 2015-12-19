@@ -46,19 +46,21 @@ Testing possibility #1
 Testing possibility #2
 ----------------------
 - Deploy the client in the different port. I use aptana studio to create a web project -> import client code -> run index.html as javascript app
-- try logging in 
+- try logging in
 - add, delete things
 
 Testing possibility #3
 ----------------------
 - grunt build:dist
 - cd mobileapp/phonegap/afsphonegap
-- cordova platform add android
-- cd mobileapp/phonegap/afsphonegap/plaforms/android/assets/www
+- unlink www
+- ln -s ../../../dist/public/ www
+- cd www
 - edit index.html
 - remove the base tag from html head
 - add "#script type="text/javascript" src="cordova.js"##/script#" as a first script tag at the end of the html
 - go back to mobileapp/phonegap/afsphonegap
+- cordova platform add android
 - cordova build android
 - try installing the resulting apk in your device
 - make sure server and the phonegap app connects to the same network (I use Wifi)
