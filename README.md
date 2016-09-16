@@ -1,5 +1,5 @@
 # AFSPhonegap
-Angular full-stack with phonegap support
+Angular full-stack with phonegap support for mobile app
 
 This project is extended from https://github.com/DaftMonk/generator-angular-fullstack
 
